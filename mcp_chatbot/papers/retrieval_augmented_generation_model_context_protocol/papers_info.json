@@ -1,0 +1,64 @@
+{
+  "2312.05708v1": {
+    "title": "Context Tuning for Retrieval Augmented Generation",
+    "authors": [
+      "Raviteja Anantha",
+      "Tharun Bethi",
+      "Danil Vodianik",
+      "Srinivas Chappidi"
+    ],
+    "summary": "Large language models (LLMs) have the remarkable ability to solve new tasks\nwith just a few examples, but they need access to the right tools. Retrieval\nAugmented Generation (RAG) addresses this problem by retrieving a list of\nrelevant tools for a given task. However, RAG's tool retrieval step requires\nall the required information to be explicitly present in the query. This is a\nlimitation, as semantic search, the widely adopted tool retrieval method, can\nfail when the query is incomplete or lacks context. To address this limitation,\nwe propose Context Tuning for RAG, which employs a smart context retrieval\nsystem to fetch relevant information that improves both tool retrieval and plan\ngeneration. Our lightweight context retrieval model uses numerical,\ncategorical, and habitual usage signals to retrieve and rank context items. Our\nempirical results demonstrate that context tuning significantly enhances\nsemantic search, achieving a 3.5-fold and 1.5-fold improvement in Recall@K for\ncontext retrieval and tool retrieval tasks respectively, and resulting in an\n11.6% increase in LLM-based planner accuracy. Additionally, we show that our\nproposed lightweight model using Reciprocal Rank Fusion (RRF) with LambdaMART\noutperforms GPT-4 based retrieval. Moreover, we observe context augmentation at\nplan generation, even after tool retrieval, reduces hallucination.",
+    "pdf_url": "http://arxiv.org/pdf/2312.05708v1",
+    "published": "2023-12-09"
+  },
+  "2311.12955v1": {
+    "title": "Don't forget private retrieval: distributed private similarity search for large language models",
+    "authors": [
+      "Guy Zyskind",
+      "Tobin South",
+      "Alex Pentland"
+    ],
+    "summary": "While the flexible capabilities of large language models (LLMs) allow them to\nanswer a range of queries based on existing learned knowledge, information\nretrieval to augment generation is an important tool to allow LLMs to answer\nquestions on information not included in pre-training data. Such private\ninformation is increasingly being generated in a wide array of distributed\ncontexts by organizations and individuals. Performing such information\nretrieval using neural embeddings of queries and documents always leaked\ninformation about queries and database content unless both were stored locally.\nWe present Private Retrieval Augmented Generation (PRAG), an approach that uses\nmulti-party computation (MPC) to securely transmit queries to a distributed set\nof servers containing a privately constructed database to return top-k and\napproximate top-k documents. This is a first-of-its-kind approach to dense\ninformation retrieval that ensures no server observes a client's query or can\nsee the database content. The approach introduces a novel MPC friendly protocol\nfor inverted file approximate search (IVF) that allows for fast document search\nover distributed and private data in sublinear communication complexity. This\nwork presents new avenues through which data for use in LLMs can be accessed\nand used without needing to centralize or forgo privacy.",
+    "pdf_url": "http://arxiv.org/pdf/2311.12955v1",
+    "published": "2023-11-21"
+  },
+  "2506.06962v2": {
+    "title": "AR-RAG: Autoregressive Retrieval Augmentation for Image Generation",
+    "authors": [
+      "Jingyuan Qi",
+      "Zhiyang Xu",
+      "Qifan Wang",
+      "Lifu Huang"
+    ],
+    "summary": "We introduce Autoregressive Retrieval Augmentation (AR-RAG), a novel paradigm\nthat enhances image generation by autoregressively incorporating knearest\nneighbor retrievals at the patch level. Unlike prior methods that perform a\nsingle, static retrieval before generation and condition the entire generation\non fixed reference images, AR-RAG performs context-aware retrievals at each\ngeneration step, using prior-generated patches as queries to retrieve and\nincorporate the most relevant patch-level visual references, enabling the model\nto respond to evolving generation needs while avoiding limitations (e.g.,\nover-copying, stylistic bias, etc.) prevalent in existing methods. To realize\nAR-RAG, we propose two parallel frameworks: (1) Distribution-Augmentation in\nDecoding (DAiD), a training-free plug-and-use decoding strategy that directly\nmerges the distribution of model-predicted patches with the distribution of\nretrieved patches, and (2) Feature-Augmentation in Decoding (FAiD), a\nparameter-efficient fine-tuning method that progressively smooths the features\nof retrieved patches via multi-scale convolution operations and leverages them\nto augment the image generation process. We validate the effectiveness of\nAR-RAG on widely adopted benchmarks, including Midjourney-30K, GenEval and\nDPG-Bench, demonstrating significant performance gains over state-of-the-art\nimage generation models.",
+    "pdf_url": "http://arxiv.org/pdf/2506.06962v2",
+    "published": "2025-06-08"
+  },
+  "2310.03025v2": {
+    "title": "Retrieval meets Long Context Large Language Models",
+    "authors": [
+      "Peng Xu",
+      "Wei Ping",
+      "Xianchao Wu",
+      "Lawrence McAfee",
+      "Chen Zhu",
+      "Zihan Liu",
+      "Sandeep Subramanian",
+      "Evelina Bakhturina",
+      "Mohammad Shoeybi",
+      "Bryan Catanzaro"
+    ],
+    "summary": "Extending the context window of large language models (LLMs) is getting\npopular recently, while the solution of augmenting LLMs with retrieval has\nexisted for years. The natural questions are: i) Retrieval-augmentation versus\nlong context window, which one is better for downstream tasks? ii) Can both\nmethods be combined to get the best of both worlds? In this work, we answer\nthese questions by studying both solutions using two state-of-the-art\npretrained LLMs, i.e., a proprietary 43B GPT and Llama2-70B. Perhaps\nsurprisingly, we find that LLM with 4K context window using simple\nretrieval-augmentation at generation can achieve comparable performance to\nfinetuned LLM with 16K context window via positional interpolation on long\ncontext tasks, while taking much less computation. More importantly, we\ndemonstrate that retrieval can significantly improve the performance of LLMs\nregardless of their extended context window sizes. Our best model,\nretrieval-augmented Llama2-70B with 32K context window, outperforms\nGPT-3.5-turbo-16k and Davinci003 in terms of average score on nine long context\ntasks including question answering, query-based summarization, and in-context\nfew-shot learning tasks. It also outperforms its non-retrieval Llama2-70B-32k\nbaseline by a margin, while being much faster at generation. Our study provides\ngeneral insights on the choice of retrieval-augmentation versus long context\nextension of LLM for practitioners.",
+    "pdf_url": "http://arxiv.org/pdf/2310.03025v2",
+    "published": "2023-10-04"
+  },
+  "2504.08744v1": {
+    "title": "ExpertRAG: Efficient RAG with Mixture of Experts -- Optimizing Context Retrieval for Adaptive LLM Responses",
+    "authors": [
+      "Esmail Gumaan"
+    ],
+    "summary": "ExpertRAG is a novel theoretical framework that integrates Mixture-of-Experts\n(MoE) architectures with Retrieval Augmented Generation (RAG) to advance the\nefficiency and accuracy of knowledge-intensive language modeling. We propose a\ndynamic retrieval gating mechanism coupled with expert routing, enabling the\nmodel to selectively consult an external knowledge store or rely on specialized\ninternal experts based on the query's needs. The paper lays out the theoretical\nfoundations of ExpertRAG, including a probabilistic formulation that treats\nretrieval and expert selection as latent decisions, and mathematical\njustifications for its efficiency in both computation and knowledge\nutilization. We derive formulae to quantify the expected computational cost\nsavings from selective retrieval and the capacity gains from sparse expert\nutilization. A comparative analysis positions ExpertRAG against standard RAG\n(with always-on retrieval) and pure MoE models (e.g., Switch Transformer,\nMixtral) to highlight its unique balance between parametric knowledge and\nnon-parametric retrieval. We also outline an experimental validation strategy,\nproposing benchmarks and evaluation protocols to test ExpertRAG's performance\non factual recall, generalization, and inference efficiency. The proposed\nframework, although presented theoretically, is supported by insights from\nprior work in RAG and MoE, and is poised to provide more factual, efficient,\nand adaptive generation by leveraging the best of both paradigms. In summary,\nExpertRAG contributes a new perspective on scaling and augmenting language\nmodels, backed by a thorough analysis and a roadmap for empirical validation.",
+    "pdf_url": "http://arxiv.org/pdf/2504.08744v1",
+    "published": "2025-03-23"
+  }
+}
