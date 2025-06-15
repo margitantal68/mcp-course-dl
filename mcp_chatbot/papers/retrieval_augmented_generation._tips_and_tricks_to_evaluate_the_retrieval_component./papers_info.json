@@ -1,0 +1,59 @@
+{
+  "2505.07917v1": {
+    "title": "Efficient and Reproducible Biomedical Question Answering using Retrieval Augmented Generation",
+    "authors": [
+      "Linus Stuhlmann",
+      "Michael Alexander Saxer",
+      "Jonathan F\u00fcrst"
+    ],
+    "summary": "Biomedical question-answering (QA) systems require effective retrieval and\ngeneration components to ensure accuracy, efficiency, and scalability. This\nstudy systematically examines a Retrieval-Augmented Generation (RAG) system for\nbiomedical QA, evaluating retrieval strategies and response time trade-offs. We\nfirst assess state-of-the-art retrieval methods, including BM25, BioBERT,\nMedCPT, and a hybrid approach, alongside common data stores such as\nElasticsearch, MongoDB, and FAISS, on a ~10% subset of PubMed (2.4M documents)\nto measure indexing efficiency, retrieval latency, and retriever performance in\nthe end-to-end RAG system. Based on these insights, we deploy the final RAG\nsystem on the full 24M PubMed corpus, comparing different retrievers' impact on\noverall performance. Evaluations of the retrieval depth show that retrieving 50\ndocuments with BM25 before reranking with MedCPT optimally balances accuracy\n(0.90), recall (0.90), and response time (1.91s). BM25 retrieval time remains\nstable (82ms), while MedCPT incurs the main computational cost. These results\nhighlight previously not well-known trade-offs in retrieval depth, efficiency,\nand scalability for biomedical QA. With open-source code, the system is fully\nreproducible and extensible.",
+    "pdf_url": "http://arxiv.org/pdf/2505.07917v1",
+    "published": "2025-05-12"
+  },
+  "2306.13421v2": {
+    "title": "Retrieval-Pretrained Transformer: Long-range Language Modeling with Self-retrieval",
+    "authors": [
+      "Ohad Rubin",
+      "Jonathan Berant"
+    ],
+    "summary": "Retrieval-augmented language models (LMs) have received much attention\nrecently. However, typically the retriever is not trained jointly as a native\ncomponent of the LM, but added post-hoc to an already-pretrained LM, which\nlimits the ability of the LM and the retriever to adapt to one another. In this\nwork, we propose the Retrieval-Pretrained Transformer (RPT), an architecture\nand training procedure for jointly training a retrieval-augmented LM from\nscratch and apply it to the task of modeling long texts. Given a recently\ngenerated text chunk in a long document, the LM computes query representations,\nwhich are then used to retrieve earlier chunks in the document, located\npotentially tens of thousands of tokens before. Information from retrieved\nchunks is fused into the LM representations to predict the next target chunk.\nWe train the retriever component with a semantic objective, where the goal is\nto retrieve chunks that increase the probability of the next chunk, according\nto a reference LM. We evaluate RPT on four long-range language modeling tasks,\nspanning books, code, and mathematical writing, and demonstrate that RPT\nimproves retrieval quality and subsequently perplexity across the board\ncompared to strong baselines.",
+    "pdf_url": "http://arxiv.org/pdf/2306.13421v2",
+    "published": "2023-06-23"
+  },
+  "2501.13726v1": {
+    "title": "RPO: Retrieval Preference Optimization for Robust Retrieval-Augmented Generation",
+    "authors": [
+      "Shi-Qi Yan",
+      "Zhen-Hua Ling"
+    ],
+    "summary": "While Retrieval-Augmented Generation (RAG) has exhibited promise in utilizing\nexternal knowledge, its generation process heavily depends on the quality and\naccuracy of the retrieved context. Large language models (LLMs) struggle to\nevaluate the correctness of non-parametric knowledge retrieved externally when\nit differs from internal memorization, leading to knowledge conflicts during\nresponse generation. To this end, we introduce the Retrieval Preference\nOptimization (RPO), a lightweight and effective alignment method to adaptively\nleverage multi-source knowledge based on retrieval relevance. An implicit\nrepresentation of retrieval relevance is derived and incorporated into the\nreward model to integrate retrieval evaluation and response generation into a\nsingle model, solving the problem that previous methods necessitate the\nadditional procedure to assess the retrieval quality. Notably, RPO is the only\nRAG-dedicated alignment approach that quantifies the awareness of retrieval\nrelevance in training, overcoming mathematical obstacles. Experiments on four\ndatasets demonstrate that RPO outperforms RAG by 4-10% in accuracy without any\nextra component, exhibiting its robust generalization.",
+    "pdf_url": "http://arxiv.org/pdf/2501.13726v1",
+    "published": "2025-01-23"
+  },
+  "2503.01478v5": {
+    "title": "SePer: Measure Retrieval Utility Through The Lens Of Semantic Perplexity Reduction",
+    "authors": [
+      "Lu Dai",
+      "Yijie Xu",
+      "Jinhui Ye",
+      "Hao Liu",
+      "Hui Xiong"
+    ],
+    "summary": "Large Language Models (LLMs) have demonstrated improved generation\nperformance by incorporating externally retrieved knowledge, a process known as\nretrieval-augmented generation (RAG). Despite the potential of this approach,\nexisting studies evaluate RAG effectiveness by 1) assessing retrieval and\ngeneration components jointly, which obscures retrieval's distinct\ncontribution, or 2) examining retrievers using traditional metrics such as\nNDCG, which creates a gap in understanding retrieval's true utility in the\noverall generation process. To address the above limitations, in this work, we\nintroduce an automatic evaluation method that measures retrieval quality\nthrough the lens of information gain within the RAG framework. Specifically, we\npropose Semantic Perplexity (SePer), a metric that captures the LLM's internal\nbelief about the correctness of the retrieved information. We quantify the\nutility of retrieval by the extent to which it reduces semantic perplexity\npost-retrieval. Extensive experiments demonstrate that SePer not only aligns\nclosely with human preferences but also offers a more precise and efficient\nevaluation of retrieval utility across diverse RAG scenarios.",
+    "pdf_url": "http://arxiv.org/pdf/2503.01478v5",
+    "published": "2025-03-03"
+  },
+  "2412.16708v1": {
+    "title": "Towards More Robust Retrieval-Augmented Generation: Evaluating RAG Under Adversarial Poisoning Attacks",
+    "authors": [
+      "Jinyan Su",
+      "Jin Peng Zhou",
+      "Zhengxin Zhang",
+      "Preslav Nakov",
+      "Claire Cardie"
+    ],
+    "summary": "Retrieval-Augmented Generation (RAG) systems have emerged as a promising\nsolution to mitigate LLM hallucinations and enhance their performance in\nknowledge-intensive domains. However, these systems are vulnerable to\nadversarial poisoning attacks, where malicious passages injected into retrieval\ndatabases can mislead the model into generating factually incorrect outputs. In\nthis paper, we investigate both the retrieval and the generation components of\nRAG systems to understand how to enhance their robustness against such attacks.\nFrom the retrieval perspective, we analyze why and how the adversarial contexts\nare retrieved and assess how the quality of the retrieved passages impacts\ndownstream generation. From a generation perspective, we evaluate whether LLMs'\nadvanced critical thinking and internal knowledge capabilities can be leveraged\nto mitigate the impact of adversarial contexts, i.e., using skeptical prompting\nas a self-defense mechanism. Our experiments and findings provide actionable\ninsights into designing safer and more resilient retrieval-augmented\nframeworks, paving the way for their reliable deployment in real-world\napplications.",
+    "pdf_url": "http://arxiv.org/pdf/2412.16708v1",
+    "published": "2024-12-21"
+  }
+}
